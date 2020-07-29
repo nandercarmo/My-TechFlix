@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { MyVideoCardGroupContainer, MyVideoCardList, MyTitle, MyExtraLink } from './styles';
 import MyVideoCard from './components/MyVideoCard';
+import { Slider, SliderItem } from './components/MySlider';
 
 function MyCarousel({ ignoreFirstVideo, category }) {
   
@@ -23,23 +25,23 @@ function MyCarousel({ ignoreFirstVideo, category }) {
           }
         </>
       )}
-      <MyVideoCardList>
+      <Slider>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
 
           return (
-            <li key={video.titulo}>
+            <SliderItem key={video.titulo}>
               <MyVideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
                 categoryColor={categoryColor}
               />
-            </li>
+            </SliderItem>
           );
         })}
-      </MyVideoCardList>
+      </Slider>
     </MyVideoCardGroupContainer>
   );
 }
