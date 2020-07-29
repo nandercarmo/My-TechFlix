@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link }  from 'react-router-dom';
 
 import Logo from '../../assets/img/logo-mytechflix.png';
 import './styles.css';
-import MyButtonLink from './components/MyButtonLink';
+import { MyButtonLinkStyled } from './components/MyButtonLinkStyled';
 
 export default function MyMenu() {
     
     return (
         <nav className='Menu'>
-            <a href='/' >
+            <Link to='/cadastro/video' >
                 <img  className='Logo' src={Logo} alt='My-Techflix logo' />
-            </a>
-            <MyButtonLink className='ButtonLink' href='/'>
+            </Link>
+            <MyButtonLinkStyled as={Link} className='ButtonLink' to='/cadastro/video'>
                 Novo vídeo
-            </MyButtonLink>
+            </MyButtonLinkStyled>
         </nav>
     );
 }

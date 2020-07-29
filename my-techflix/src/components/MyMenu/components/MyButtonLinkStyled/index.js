@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MyButtonLinkStyled = styled.a`
+export const MyButtonLinkStyled = styled.a`
     color: var(--white);
     border: 1px solid var(--white);
     box-sizing: border-box;
@@ -19,5 +19,3 @@ const MyButtonLinkStyled = styled.a`
         opacity: .5;
     }
 `;
-
-export default MyButtonLinkStyled;

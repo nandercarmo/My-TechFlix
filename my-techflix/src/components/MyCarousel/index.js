@@ -1,30 +1,29 @@
 import React from 'react';
-import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
-import VideoCard from './components/VideoCard';
+import { MyVideoCardGroupContainer, MyVideoCardList, MyTitle, MyExtraLink } from './styles';
+import MyVideoCard from './components/MyVideoCard';
 
-function VideoCardGroup({
-  ignoreFirstVideo,
-  category,
-}) {
+function MyCarousel({ ignoreFirstVideo, category }) {
+  
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+  
   return (
-    <VideoCardGroupContainer>
+    <MyVideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
+          <MyTitle style={{ backgroundColor: categoryColor || 'red' }}>
             {categoryTitle}
-          </Title>
+          </MyTitle>
           {categoryExtraLink && 
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
+            <MyExtraLink href={categoryExtraLink.url} target="_blank">
               {categoryExtraLink.text}  
-            </ExtraLink>
+            </MyExtraLink>
           }
         </>
       )}
-      <VideoCardList>
+      <MyVideoCardList>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
@@ -32,7 +31,7 @@ function VideoCardGroup({
 
           return (
             <li key={video.titulo}>
-              <VideoCard
+              <MyVideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
                 categoryColor={categoryColor}
@@ -40,9 +39,9 @@ function VideoCardGroup({
             </li>
           );
         })}
-      </VideoCardList>
-    </VideoCardGroupContainer>
+      </MyVideoCardList>
+    </MyVideoCardGroupContainer>
   );
 }
 
-export default VideoCardGroup;
+export default MyCarousel;

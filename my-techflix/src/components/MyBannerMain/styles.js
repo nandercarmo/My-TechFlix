@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContentAreaContainer = styled.section`
+export const MyContentAreaContainer = styled.section`
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
@@ -15,7 +15,7 @@ export const ContentAreaContainer = styled.section`
   }
 `;
 
-ContentAreaContainer.Item = styled.div`
+MyContentAreaContainer.Item = styled.div`
   width: 50%;
   display: inline-block;
   margin-bottom: 50px;
@@ -24,7 +24,7 @@ ContentAreaContainer.Item = styled.div`
   }
 `;
 
-ContentAreaContainer.Category = styled.h1`
+MyContentAreaContainer.Category = styled.h1`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -45,13 +45,13 @@ ContentAreaContainer.Category = styled.h1`
   }
 `;
 
-ContentAreaContainer.Description = styled.p`
+MyContentAreaContainer.Description = styled.p`
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-ContentAreaContainer.Title = styled.h2`
+MyContentAreaContainer.Title = styled.h2`
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -65,7 +65,7 @@ ContentAreaContainer.Title = styled.h2`
   }
 `;
 
-export const BannerMainContainer = styled.section`
+export const MyBannerMainContainer = styled.section`
   height: 80vh;
   position: relative;
   color: #fff;
@@ -100,7 +100,7 @@ export const BannerMainContainer = styled.section`
   }
 `;
 
-export const WatchButton = styled.button`
+export const MyWatchButton = styled.button`
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;

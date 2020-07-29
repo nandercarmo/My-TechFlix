@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const VideoContainer = styled.div`
+export const MyVideoContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -10,7 +10,7 @@ export const VideoContainer = styled.div`
   }
 `;
 
-export const ResponsiveIframe = styled.iframe`
+export const MyResponsiveIframe = styled.iframe`
   position: absolute;
   top: 0;
   left: 0;
