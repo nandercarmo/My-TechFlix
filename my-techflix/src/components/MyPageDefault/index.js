@@ -13,7 +13,7 @@ const Main = styled.main`
     padding-right: 5%;
 `;
 
-export default function PageDefault({ children }) {
+export default function MyPageDefault({ children }) {
 
     return(
         <>

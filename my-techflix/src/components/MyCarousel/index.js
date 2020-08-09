@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MyVideoCardGroupContainer, MyVideoCardList, MyTitle, MyExtraLink } from './styles';
+import { MyVideoCardGroupContainer, MyTitle, MyExtraLink } from './styles';
 import MyVideoCard from './components/MyVideoCard';
 import { Slider, SliderItem } from './components/MySlider';
 
