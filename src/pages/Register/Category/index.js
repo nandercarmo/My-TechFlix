@@ -26,7 +26,7 @@ export default function RegisterCategory() {
 
     useEffect(() => {
 
-        const URL = 'http://localhost:8080/categorias';
+        const URL = 'https://my-techflix.herokuapp.com/categorias';
         fetch(URL)
         .then(async (response) => {
             const jsonResponse = await response.json();
