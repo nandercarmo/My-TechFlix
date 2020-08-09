@@ -8,5 +8,5 @@ const port = process.env.PORT || 8080;
 server.use(middlewares)
 server.use(router)
 server.listen(port, () => {
-  console.log(`JSON Server is running in ${port}`)
+  console.log(`JSON Server rodando na porta: ${port}`)
 }) 
