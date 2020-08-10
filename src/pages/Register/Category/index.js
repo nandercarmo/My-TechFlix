@@ -4,29 +4,25 @@ import { Link } from 'react-router-dom';
 import MyPageDefault from '../../../components/MyPageDefault';
 import MyFormField from '../../../components/MyFormField';
 import { MyButtonLinkStyled } from '../../../components/MyButtonLinkStyled';
+import useForm from '../../../hooks/useForm';
 
 export default function RegisterCategory() {
 
     const initialValues = {
-        name: '',
+        title: '',
         description: '',
         color: '#000000',
     };
+
+    const { handleChange, newValue, clearForm } = useForm(initialValues);
     
     const [categories, setCategories] = useState([]);
-    const [newValue, setNewValue] = useState(initialValues);
-
-    function handleChange(event) {
-
-        setNewValue({
-            ...newValue,
-            [event.target.getAttribute('name')]: event.target.value
-        });
-    }
 
     useEffect(() => {
 
-        const URL = 'https://my-techflix.herokuapp.com/categorias';
+        const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categorias'
+        : 'https://my-techflix.herokuapp.com/categorias';
         fetch(URL)
         .then(async (response) => {
             const jsonResponse = await response.json();
@@ -39,20 +35,20 @@ export default function RegisterCategory() {
 
     return (
         <MyPageDefault>
-            <h1>Cadastro de Categoria: {newValue.name}</h1>
+            <h1>Cadastro de Categoria: {newValue.title}</h1>
             <form 
                 onSubmit={(event) => { 
                     event.preventDefault();
                     setCategories([...categories, newValue]);
-                    setNewValue(initialValues);
+                    clearForm();
                 }}
             >
                 <div>
                     <MyFormField 
                         label= "Nova categoria"
                         type="text"
-                        name="name" 
-                        value={newValue.name}
+                        name="title" 
+                        value={newValue.title}
                         onChange={handleChange}
                     />
                     <MyFormField
@@ -70,7 +66,9 @@ export default function RegisterCategory() {
                         onChange={handleChange}
                     />
                 </div>
-                <MyButtonLinkStyled>Cadastrar</MyButtonLinkStyled>
+                <MyButtonLinkStyled type="submit">
+                    Cadastrar
+                </MyButtonLinkStyled>
             </form>
 
             {categories.length === 0 && (
@@ -84,8 +82,8 @@ export default function RegisterCategory() {
                 {categories.map((category, index) => {
 
                     return (
-                        <li key={`${category.name}${index}`}>
-                            {category.name}
+                        <li key={`${category.title}${index}`}>
+                            {category.title}
                         </li>
                     )
                 })}

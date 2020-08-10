@@ -6,8 +6,8 @@ import { Slider, SliderItem } from './components/MySlider';
 
 function MyCarousel({ ignoreFirstVideo, category }) {
   
-  const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
+  const categoryTitle = category.title;
+  const categoryColor = category.color;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
   
