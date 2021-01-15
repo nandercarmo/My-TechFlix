@@ -7,8 +7,11 @@ My-TechFlix is a project developed during Alura's "React Immersion", with the ob
 To test this code, make a clone of this repository and then install it using:
 
 > git clone https://github.com/NanderSantos/My-TechFlix.git
+
 > cd My-TechFlix
+
 > npm install
+
 > npm start
 
 Or just run this one-liner command and everything will be done:
