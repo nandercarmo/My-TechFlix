@@ -12,11 +12,15 @@ To test this code, make a clone of this repository and then install it using:
 
 > npm install
 
-> npm start
-
 Or just run this one-liner command and everything will be done:
 
-> git clone https://github.com/NanderSantos/My-TechFlix.git && cd My-TechFlix && npm install && npm start
+> git clone https://github.com/NanderSantos/My-TechFlix.git && cd My-TechFlix && npm install
+
+## Run
+
+To run this project simply do:
+
+> npm start
 
 ## Hosting
 
