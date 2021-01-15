@@ -25,3 +25,9 @@ To run this project simply do:
 ## Hosting
 
 The production version of this repo is available at: [My-TechFlix](https://my-tech-flix.vercel.app/)
+
+## Image
+
+<p align="center">
+  <img src="github-image.jpeg" width="1000" title="hover text">
+</p>
