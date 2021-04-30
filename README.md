@@ -8,6 +8,9 @@
     <img src="https://img.shields.io/badge/style-css-blue">
     <img src="https://img.shields.io/badge/license-MIT-blueviolet">
 </div>
+
+---
+
 **My-TechFlix** is a project developed during **Alura's "React Immersion"**, with the objective of consolidating and improving knowledge about **Javascript**, **React**, **HTML** and **CSS**.
 
 <p align="center">
